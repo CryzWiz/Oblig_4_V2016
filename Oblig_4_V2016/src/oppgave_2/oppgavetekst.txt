@@ -2,11 +2,15 @@ Oppgave 2
 Lag et nytt prosjekt og legg dette inn i din GIT repository.
 Oppgaven går ut på å implementere løsningen på "Tower of Hanoi" og utvide denne med mer funksjonalitet. 
 Bruk programlistingen i boka og endre ledetekst og utskrifter til norsk.
-Når dette fungerer utgjør dette første utgave  og skal ha versjon 0.1. Gjør en Commit på dette i GIT 
+Når dette fungerer utgjør dette første utgave  og skal ha versjon 0.1. 
+Gjør en Commit på dette i GIT 
 ---
-Gjør en branch i GIT og legg til funksjonalitet for å telle antall flyttinger (Exercise 18.18 fra lab tirsdag)
+Gjør en branch i GIT og legg til funksjonalitet for å telle antall flyttinger 
+(Exercise 18.18 fra lab tirsdag)
 Resultatet skal skrives ut (med passende ledetekst) etter alle flyttinger er skrevet ut.
 Når dette fungerer utgjør det andre utgave. Gjør en Commit og foreta en merge mot master til versjon 0.2.
 ----
-Gjør en ny branch i GIT og legg til funksjonalitet for også å telle antall kall til den rekursive metoden. Resultatet skrives ut til slutt.
-Når programmet fungerer som forventet og du er fornøyd, gjør Commit og foreta en merge mot master til versjon 0.3. Publiser løsningen på GitHub.
+Gjør en ny branch i GIT og legg til funksjonalitet for også å telle antall kall til den rekursive metoden. 
+Resultatet skrives ut til slutt.
+Når programmet fungerer som forventet og du er fornøyd, gjør Commit og foreta en merge mot master til versjon 0.3. 
+Publiser løsningen på GitHub.
