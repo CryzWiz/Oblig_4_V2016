@@ -1,0 +1,22 @@
+Oppgave 3
+Du skal skrive klassen Bank som skal simulere en bank med et visst antall kontoer og kunder (10 stk. i eksempelet).
+Hver kunde har sin egen konto hvor han kan ta ut penger for overføring til en annen konto. En kunde skal kun kunne 
+ta ut penger fra sin egen konto dersom det er dekning på kontoen. 
+Dersom det ikke er dekning på kontoen skal kunden vente på at en annen kunde setter inn penger på hans konto og deretter
+foreta overføringen. Hver kunde skal implementeres som en egen tråd.
+Kundene går i evig loop og skal gjøre følgende
+Velg en tilfeldig konto i banken for å overføre penger til
+Velg et tilfeldig beløp for overføringen
+Dersom dekning på egen konto gå til pkt. 5
+Dersom ikke dekning på egen konto vent på at noen setter inn penger på kontoen
+Foreta overføringen
+Ta en tilfeldig pause for så å starte på pkt. 1 igjen.
+For å hele tiden være sikker på at vi ikke "mister" noen penger skal klassen bank ha en metode test() 
+som sjekker at summen av alle kontoer hele tiden er den samme. Denne skal kalles jevnlig  (for eksempel ved hver 10000 overføring).
+Skriv ut statusmeldinger til skjerm for hver kunde slik at det er mulig å følge med på hva hver kunde driver med.
+Du kan ta utgangspunkt i filen UnsynchBankTest.java som ligger på ITSL. Der ligger også en video med introduksjon til oppgaven.
+(Programmet oppretter 10 tråder som alle aksesserer en felles bank med 10 bankkontoer, en for hver tråd. Hver konto har 
+initiellt 10000 på konto dvs. totalt har banken 10*10000 kr på alle de 10 kontoene. 
+Dersom det ikke oppstår kappløp skulle dette beløpet holde seg konstant. 
+Trådene overfører penger til hverandre uten synkronisering. 
+Etter en tids kjøring av programmet vil totalsummen for alle kontoene ikke lengre være 10*10000. Programmet demonstrerer dette.)
