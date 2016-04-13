@@ -11,21 +11,18 @@ public class TowerOfHanoi {
 
 	    // Find the solution recursively
 	    System.out.println("Trekkene er som følger:");
-	    moveDisks(n, 'A', 'B', 'C');
+	    flyttDisker(n, 'A', 'B', 'C');
 	  }
 
 	  /** The method for finding the solution to move n disks
 	      from fromTower to toTower with auxTower */
-	  public static void moveDisks(int n, char fromTower,
-	      char toTower, char auxTower) {
+	  public static void flyttDisker(int n, char fraTaarn, char tilTaarn, char hjelpeTaarn) {
 	    if (n == 1) // Stopping condition
-	      System.out.println("Flytter disk " + n + " fra " +
-	        fromTower + " til " + toTower);
+	      System.out.println("Flytter disk " + n + " fra " + fraTaarn + " til " + tilTaarn);
 	    else {
-	      moveDisks(n - 1, fromTower, auxTower, toTower);
-	      System.out.println("Flytter disk " + n + " til " +
-	        fromTower + " fra " + toTower);
-	      moveDisks(n - 1, auxTower, toTower, fromTower);
+	      flyttDisker(n - 1, fraTaarn, hjelpeTaarn, tilTaarn);
+	      System.out.println("Flytter disk " + n + " til " + fraTaarn + " fra " + tilTaarn);
+	      flyttDisker(n - 1, hjelpeTaarn, tilTaarn, fraTaarn);
 	    }
 	  }
 
