@@ -1,7 +1,7 @@
 package oppgave_2;
 import java.util.Scanner; 
 public class TowerOfHanoi {
-
+	public static int antallFlyttinger = 0;
 	 /** Main method */
 	  public static void main(String[] args) {
 	    // Create a Scanner
@@ -12,17 +12,21 @@ public class TowerOfHanoi {
 	    // Find the solution recursively
 	    System.out.println("Trekkene er som følger:");
 	    flyttDisker(n, 'A', 'B', 'C');
+	    System.out.println("Antall flyttinger er: " + antallFlyttinger);
 	  }
 
 	  /** The method for finding the solution to move n disks
 	      from fromTower to toTower with auxTower */
 	  public static void flyttDisker(int n, char fraTaarn, char tilTaarn, char hjelpeTaarn) {
-	    if (n == 1) // Stopping condition
+	    if (n == 1){ // Stopping condition
 	      System.out.println("Flytter disk " + n + " fra " + fraTaarn + " til " + tilTaarn);
+	      antallFlyttinger++;
+	  }
 	    else {
 	      flyttDisker(n - 1, fraTaarn, hjelpeTaarn, tilTaarn);
 	      System.out.println("Flytter disk " + n + " til " + fraTaarn + " fra " + tilTaarn);
 	      flyttDisker(n - 1, hjelpeTaarn, tilTaarn, fraTaarn);
+	      antallFlyttinger++;
 	    }
 	  }
 
