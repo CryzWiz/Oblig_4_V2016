@@ -2,6 +2,7 @@ package oppgave_2;
 import java.util.Scanner; 
 public class TowerOfHanoi {
 	public static int antallFlyttinger = 0;
+	public static int antallKall = 0;
 	 /** Main method */
 	  public static void main(String[] args) {
 	    // Create a Scanner
@@ -13,6 +14,7 @@ public class TowerOfHanoi {
 	    System.out.println("Trekkene er som følger:");
 	    flyttDisker(n, 'A', 'B', 'C');
 	    System.out.println("Antall flyttinger er: " + antallFlyttinger);
+	    System.out.println("Antall kall er: " + antallKall);
 	  }
 
 	  /** The method for finding the solution to move n disks
@@ -21,11 +23,14 @@ public class TowerOfHanoi {
 	    if (n == 1){ // Stopping condition
 	      System.out.println("Flytter disk " + n + " fra " + fraTaarn + " til " + tilTaarn);
 	      antallFlyttinger++;
+	      antallKall++;
 	  }
 	    else {
 	      flyttDisker(n - 1, fraTaarn, hjelpeTaarn, tilTaarn);
+	      antallKall++;
 	      System.out.println("Flytter disk " + n + " til " + fraTaarn + " fra " + tilTaarn);
 	      flyttDisker(n - 1, hjelpeTaarn, tilTaarn, fraTaarn);
+	      antallKall++;
 	      antallFlyttinger++;
 	    }
 	  }
