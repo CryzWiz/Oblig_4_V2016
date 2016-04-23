@@ -10,9 +10,13 @@ public class TowerOfHanoi {
 	    System.out.print("Legg inn antall skiver: ");
 	    int n = input.nextInt();
 
+	    // Ser ikke helt poenget med å telle antall kall og antall flyttinger, da disse vil være like. 
+	    // Men har uansett lagt inn 2 tellere. En for flyttinger, og en for kall til funksjonen.
+	    
 	    // Find the solution recursively
 	    System.out.println("Trekkene er som følger:");
 	    flyttDisker(n, 'A', 'B', 'C');
+	    antallKall++;
 	    System.out.println("Antall flyttinger er: " + antallFlyttinger);
 	    System.out.println("Antall kall er: " + antallKall);
 	  }
@@ -23,7 +27,6 @@ public class TowerOfHanoi {
 	    if (n == 1){ // Stopping condition
 	      System.out.println("Flytter disk " + n + " fra " + fraTaarn + " til " + tilTaarn);
 	      antallFlyttinger++;
-	      antallKall++;
 	  }
 	    else {
 	      flyttDisker(n - 1, fraTaarn, hjelpeTaarn, tilTaarn);
