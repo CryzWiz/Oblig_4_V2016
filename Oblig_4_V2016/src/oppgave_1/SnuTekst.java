@@ -9,6 +9,7 @@ public class SnuTekst {
 		int siste = tekst.length() - 1;
 		System.out.println("Setningen du skrev inn baklengs:");
 		baklengs(tekst, siste);
+		
 		System.out.printf("\nSetningen/ordet inneholder %d tegn.", teller);
 
 	}
