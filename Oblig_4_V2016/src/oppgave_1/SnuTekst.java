@@ -18,10 +18,6 @@ public class SnuTekst {
 		teller++;
 		baklengs(tekst, siste - 1);
 		}
-		else{
-			System.out.println("Ingen ord eller setning ble oppdaget...");
-		}
-		
 	}
 
 }
