@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Bank {
 	//antall kontoer i banken og startsaldoen til hver konto.
-	private static final int ANTALL_KONTOER = 10;
+	private static final int ANTALL_KONTOER = 20;
 	private static final double START_SALDO = 10000.00;
 	//Har valgt litt andre tall enn UnsynchBankTest.
 	//Antall kontoer og startsaldo er det samme, men antall reps og tallet som "beløpet" deles på 
@@ -114,10 +114,10 @@ class TransaksjonsTraad extends Thread{
 	private int fraKonto;
 	private double maxBelop;
 	
-	//Endre disse to for å sette et lavere/høyere beløp som skal settes inn/tas ut. Og antall reps.
-	private int REPS = 100;
+	//Endre disse to for å sette et lavere/høyere beløp som skal settes inn/tas ut.
+	private int REPS = 10;
 	private int divider = 10;
-	
+	private int sleep = 1;
 	public TransaksjonsTraad(Beholdning bank, int fraKonto, double maxBelop){
 		this.bank = bank;
 		this.fraKonto = fraKonto;
@@ -134,7 +134,7 @@ class TransaksjonsTraad extends Thread{
 	             int tilKonto = (int)(Beholdning.antallKontoer() * Math.random ());
 	             int amount = (int)(maxBelop * Math.random () / divider);
 	             bank.Transaksjon (fraKonto, tilKonto, amount);
-	             sleep (100);
+	             sleep (sleep);
 	          }
 	       }
 	    }
