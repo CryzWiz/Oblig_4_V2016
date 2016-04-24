@@ -17,6 +17,7 @@ public class TowerOfHanoi {
 	    System.out.println("Trekkene er som følger:");
 	    flyttDisker(n, 'A', 'B', 'C');
 	    antallKall++;
+	    
 	    System.out.println("Antall flyttinger er: " + antallFlyttinger);
 	    System.out.println("Antall kall er: " + antallKall);
 	  }
