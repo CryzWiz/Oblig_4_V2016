@@ -28,7 +28,6 @@ public class TowerOfHanoi {
 	    if (n == 1){ // Stopping condition
 	      System.out.println("Flytter disk " + n + " fra " + fraTaarn + " til " + tilTaarn);
 	      antallFlyttinger++;
-	      antallKall++;
 	  }
 	    else {
 	      flyttDisker(n - 1, fraTaarn, hjelpeTaarn, tilTaarn);
